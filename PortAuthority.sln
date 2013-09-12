@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.20617.1 PREVIEW
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortAuthorityApplication", "PortAuthorityApplication\PortAuthorityApplication.csproj", "{765584DB-2797-43CC-A5B3-29A2373F1710}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PortAuthority", "PortAuthority\PortAuthority.csproj", "{E4827850-7A32-48E1-9285-24D73E919171}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{765584DB-2797-43CC-A5B3-29A2373F1710}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{765584DB-2797-43CC-A5B3-29A2373F1710}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{765584DB-2797-43CC-A5B3-29A2373F1710}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{765584DB-2797-43CC-A5B3-29A2373F1710}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4827850-7A32-48E1-9285-24D73E919171}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4827850-7A32-48E1-9285-24D73E919171}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4827850-7A32-48E1-9285-24D73E919171}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4827850-7A32-48E1-9285-24D73E919171}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

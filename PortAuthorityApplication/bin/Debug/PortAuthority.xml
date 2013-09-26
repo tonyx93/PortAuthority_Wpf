@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PortAuthority</name>
+    </assembly>
+    <members>
+        <member name="T:PortAuthority.PortAuthority">
+            <summary>
+            The PortAuthority class is used to perform various packet capturing functions and web queries associated with a specified network interface and Student Life's Netcenter's port_authority.php
+            </summary>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.#ctor(System.Net.NetworkInformation.NetworkInterface,System.String)">
+            <summary>
+            Initializes a new instance of the PortAuthority class that interrogates the NetworkInterface object that is passed to this constructor.
+            Upon instantiation, the MAC address and IP address properties of this class are updated to reflect that of the given network interface.
+            </summary>
+            <param name="n">The network interface to be examined by this class</param>
+            <param name="url">The URL of the PortAuthority web app</param>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.GetIP">
+            <summary>
+            Gets the IPv4 Address associated with the network interface
+            </summary>
+            <returns>A string representing the IPv4 address in xxx.xxx.xxx.xxx format where xxx is an integer in the range of [0,256]</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.GenerateQueryString(System.String,System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            Returns a query string using the parameters as the field values
+            </summary>
+            <param name="rm">Room number</param>
+            <param name="jack">Jack name as stated in the room</param>
+            <param name="nswitch">Switch name</param>
+            <param name="port">The name of the port used on the switch</param>
+            <param name="gb">True if the port supports Gigabit speeds. False otherwise</param>
+            <param name="user">Student Affairs username for authentication</param>
+            <param name="pass">Student Affairs password for authentication</param>
+            <returns>A query string with the fields filled out by the values given in the parameters</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.ConvertQueryStringToBytes(System.String)">
+            <summary>
+            Converts a query string to an equivalent array of bytes
+            </summary>
+            <param name="query">The query string</param>
+            <returns>A byte array representing the given query string</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.WriteNetCenter(System.Byte[])">
+            <summary>
+            Sends a POST request to Netcenter with data given by the parameter postData
+            Then calls the private method <c>ReadNetCenter</c> to obtain the response message and returns it as a string.
+            </summary>
+            <param name="postData">Data to be posted to Netcenter</param>
+            <returns>A string representing the response from Netcenter</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.GetWebRequestReponse(System.Net.WebRequest)">
+            <summary>
+            Gets the response message from the WebRequest object passed in the parameter
+            </summary>
+            <param name="wr">The WebRequest object to be interrogated</param>
+            <returns>A string with the reponse message from the given WebRequest</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.SetupCaptureDevice">
+            <summary>
+            Sets up the network adapter for capturing network packets
+            </summary>
+            <returns>True on success, false otherwise</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.GetSwitchInformation(System.String@,System.String@,System.Boolean@)">
+            <summary>
+            On success, <c>SetupCaptureDevice</c> will get information about the network switch connected to the network interface and store it in the references given in the parameters
+            </summary>
+            <param name="sname">A reference to a string for the name of the switch to be stored in</param>
+            <param name="port">A reference to a string for the id of the used port on the switch to be be stored in</param>
+            <param name="gigabit">A reference to a boolean for whether or not the port supports gigabit speed connections to be stored in</param>
+            <returns>True upon success, false otherwise</returns>
+        </member>
+        <member name="M:PortAuthority.PortAuthority.CaptureLLDPPacket">
+            <summary>
+            Captures a LLDP network packet from the connected switch and returns a <c>LLDPPacket</c> class object that represents the packet
+            </summary>
+            <returns>The LLDP packet captured from the switch</returns>
+        </member>
+    </members>
+</doc>

@@ -37,13 +37,15 @@ namespace PortAuthority
 
         #region Constructors
         /// <summary>
-        /// Initializes a new instance of the PortAuthority class that focuses on the NetworkInterface object that is passed to this constructor.
+        /// Initializes a new instance of the PortAuthority class that interrogates the NetworkInterface object that is passed to this constructor.
+        /// Upon instantiation, the MAC address and IP address properties of this class are updated to reflect that of the given network interface.
         /// </summary>
-        /// <param name="n"></param>
-        public PortAuthority(NetworkInterface n)
+        /// <param name="n">The network interface to be examined by this class</param>
+        /// <param name="url">The URL of the PortAuthority web app</param>
+        public PortAuthority(NetworkInterface n, string url)
         {
             ni = n;
-            url = "https://netcenter.studentaffairs.ohio-state.edu/portmapper/port_authority.php";
+            this.url = url;
             MACAddress = BitConverter.ToString(n.GetPhysicalAddress().GetAddressBytes()).Replace('-', ':');
             IPAddress = GetIP();
         }
@@ -144,6 +146,10 @@ namespace PortAuthority
             return resp;
         }
 
+        /// <summary>
+        /// Sets up the network adapter for capturing network packets
+        /// </summary>
+        /// <returns>True on success, false otherwise</returns>
         private bool SetupCaptureDevice()
         {
             bool success = false;
@@ -160,6 +166,13 @@ namespace PortAuthority
             return success;
         }
 
+        /// <summary>
+        /// On success, <c>SetupCaptureDevice</c> will get information about the network switch connected to the network interface and store it in the references given in the parameters
+        /// </summary>
+        /// <param name="sname">A reference to a string for the name of the switch to be stored in</param>
+        /// <param name="port">A reference to a string for the id of the used port on the switch to be be stored in</param>
+        /// <param name="gigabit">A reference to a boolean for whether or not the port supports gigabit speed connections to be stored in</param>
+        /// <returns>True upon success, false otherwise</returns>
         private bool GetSwitchInformation(ref string sname, ref string port, ref bool gigabit)
         {
             var lldp = CaptureLLDPPacket();
@@ -175,6 +188,10 @@ namespace PortAuthority
             return true;
         }
 
+        /// <summary>
+        /// Captures a LLDP network packet from the connected switch and returns a <c>LLDPPacket</c> class object that represents the packet
+        /// </summary>
+        /// <returns>The LLDP packet captured from the switch</returns>
         private LLDPPacket CaptureLLDPPacket()
         {
             idev.Filter = "ether dst 01:80:c2:00:00:0e";

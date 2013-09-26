@@ -1,2 +1,22 @@
 C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\WpfApplication1\bin\Debug\WpfApplication1.exe.config
 C:\Users\t59328\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\WpfApplication1.exe.config
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\WpfApplication1.exe.config
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\WpfApplication1.exe
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\WpfApplication1.pdb
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\PortAuthority.dll
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\SharpPcap.dll
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\PacketDotNet.dll
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\PortAuthority.pdb
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\PortAuthority.xml
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\SharpPcap.xml
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\bin\Debug\PacketDotNet.xml
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\PortAuthorityApplication.csprojResolveAssemblyReference.cache
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\PortAuthorityView.baml
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\PortAuthorityView.g.cs
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\App.g.cs
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\WpfApplication1_MarkupCompile.cache
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\WpfApplication1.g.resources
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\WpfApplication1.Properties.Resources.resources
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\PortAuthorityApplication.csproj.GenerateResource.Cache
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\WpfApplication1.exe
+C:\Users\Tony Xu\Documents\GitHub\PortAuthority_Wpf\PortAuthorityApplication\obj\Debug\WpfApplication1.pdb
